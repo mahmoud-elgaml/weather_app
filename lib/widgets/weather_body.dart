@@ -17,13 +17,32 @@ class _WeatherBodyState extends State<WeatherBody> {
         Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Icon(Icons.location_pin, size: 28, color: Colors.white),
+            Icon(
+              Icons.location_pin,
+              size: 28,
+              color: Colors.white,
+              //
+            ),
             const SizedBox(width: 12),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Egypt', style: TextStyle(fontSize: 24, color: kTextColor)),
-                Text('Cairo', style: TextStyle(fontSize: 24, color: kTextColor)),
+                Text(
+                  'Egypt',
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: kTextColor,
+                    //
+                  ),
+                ),
+                Text(
+                  'Cairo',
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: kTextColor,
+                    //
+                  ),
+                ),
               ],
             ),
             //
@@ -33,7 +52,13 @@ class _WeatherBodyState extends State<WeatherBody> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Column(children: [Text('Sunny'), Text('30')]),
+            Column(
+              children: [
+                Text('Sunny'),
+                Text('30'),
+                //
+              ],
+            ),
             const SizedBox(width: 20),
             Icon(Icons.sunny, size: 60, color: kTextColor),
           ],
@@ -43,7 +68,6 @@ class _WeatherBodyState extends State<WeatherBody> {
           children: [
             WeatherCard(),
             WeatherCard(),
-
             WeatherCard(),
 
             //

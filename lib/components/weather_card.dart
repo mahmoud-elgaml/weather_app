@@ -12,12 +12,18 @@ class _WeatherCardState extends State<WeatherCard> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
+   mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Text('data'),
            Text('data'),
-           Icon(Icons.sunny),
+           Icon(Icons.sunny
+           
+           ,
+           size: 50,
+           color: Colors.yellow,
+           //
+           ),
             Text('data'),
-
           //
         ],
       ),
