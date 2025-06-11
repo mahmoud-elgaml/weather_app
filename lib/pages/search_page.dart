@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/widgets/custom_search_field.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -10,16 +11,7 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: Container(
-            child: TextField(),
-            //
-          ),
-        ),
-        //
-      ],
-    );
+    return CustomSearchField();
   }
 }
+
