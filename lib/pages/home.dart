@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/pages/search_page.dart';
 import 'package:weather_app/utils/colors.dart';
+import 'package:weather_app/widgets/custom_search_field.dart';
+import 'package:weather_app/widgets/weather_body.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -16,12 +17,8 @@ class _HomeState extends State<Home> {
       backgroundColor: kBackgroundColor,
       appBar: AppBar(
         backgroundColor: kBackgroundColor,
-        title: Text('Weather',
-        style: TextStyle(
-          color: kTextColor,
-        ),
-        ),
-                centerTitle: true,
+        title: Text('Weather', style: TextStyle(color: kTextColor)),
+        centerTitle: true,
 
         //
       ),
@@ -33,7 +30,9 @@ class _HomeState extends State<Home> {
         ),
         child: Column(
           children: [
-            SearchPage(),
+            CustomSearchField(),
+            const SizedBox(height: 60),
+            WeatherBody(),
             //
           ],
           //
