@@ -69,7 +69,6 @@ class _WeatherBodyState extends State<WeatherBody> {
             WeatherCard(),
             WeatherCard(),
             WeatherCard(),
-
             //
           ],
           //
