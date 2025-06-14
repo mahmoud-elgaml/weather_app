@@ -1,16 +1,41 @@
-# weather_app
+# 🌦️ Weather App
 
-A new Flutter project.
+A simple Flutter weather app that displays the current weather based on the user's location. The user can also search for other cities to view their weather information. The app supports light and dark themes, following the system's theme mode.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🌍 Get the current weather using GPS
+- 🔍 Search for any city and view its weather
+- 🌡️ Display temperature, weather condition, and city name
+- 🌙 Supports system theme mode (Light/Dark)
+- 📱 Responsive UI using `flutter_screenutil`
+- 🎨 Beautiful UI using `flutter_svg` and `lottie`
+- ✅ State management with `flutter_riverpod`
+- 🚫 Graceful error handling for no internet or invalid input
+- 💡 Clean architecture with `dio` and `dartz`
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📽️ Demo
+
+https://user-images.githubusercontent.com/76569794/284590598-40b64c90-9b1d-4a18-87cb-7eb061f156b1.mp4
+
+---
+
+## 📦 Packages Used
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  dio: ^5.8.0+1
+  flutter_riverpod: ^2.6.1
+  intl: ^0.20.2
+  geolocator: ^14.0.1
+  flutter_svg: ^latest
+  lottie: ^latest
+  flutter_screenutil: ^latest
+  flutter_launcher_icons: ^0.14.4
