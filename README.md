@@ -20,9 +20,9 @@ A simple Flutter weather app that displays the current weather based on the user
 
 ## 📽️ Demo
 
-To see the app, check out the video:
+To see the app in action, check out the demo video below:
 
-<video src="https://user-images.githubusercontent.com/76569794/284590598-40b64c90-9b1d-4a18-87cb-7eb061f156b1.mp4" controls width="300"></video>
+<video src="https://github.com/user-attachments/assets/80c933b0-00b1-4f0d-b850-a514edeef790" controls width="280" style="border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);"></video>
 
 ---
 
