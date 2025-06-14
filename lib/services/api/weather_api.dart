@@ -1,29 +1,37 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import 'package:weather_app/services/model/weather_model.dart';
 
 class WeatherApi {
-  // https://api.weatherapi.com/v1/forecast.json?key=0795a621717d498386d113008230307&q=London&days=3&aqi=yes&alerts=no
-  final String apiKey = '0795a621717d498386d113008230307';
-  final String baseUrl = 'https://api.weatherapi.com/v1';
-  
-  final dio = Dio();
+  static const _apiKey = '0795a621717d498386d113008230307';
+  static const _baseUrl = 'https://api.weatherapi.com/v1';
+  static final Dio _dio = Dio();
 
-  Future<WeatherModel> getWeather() async {
-    final response = await dio.get(
-      'https://api.weatherapi.com/v1/forecast.json',
-      queryParameters: {
-        'key': apiKey,
-        'q': 'cairo',
-        'days': 3,
-        'aqi': 'no',        
-        //
-      },
+  static Future<WeatherModel> getWeather({required String cityName}) async {
+    try {
+      final response = await _dio.get(
+        '$_baseUrl/forecast.json',
+        queryParameters: {'key': _apiKey, 'q': cityName, 'days': 3, 'aqi': 'no', 'alerts': 'no'},
+      );
 
-    );
-    WeatherModel weatherModel = WeatherModel.fromJson(response.data);
-    log(weatherModel.status);
-    return weatherModel;
+      return WeatherModel.fromJson(response.data);
+    } catch (e) {
+      throw Exception('Failed to fetch weather: $e');
+    }
+  }
+
+  static Future<WeatherModel> getWeatherByLocation({
+    required double lat,
+    required double lon,
+  }) async {
+    try {
+      final response = await _dio.get(
+        '$_baseUrl/forecast.json',
+        queryParameters: {'key': _apiKey, 'q': '$lat,$lon', 'days': 3, 'aqi': 'no', 'alerts': 'no'},
+      );
+
+      return WeatherModel.fromJson(response.data);
+    } catch (e) {
+      throw Exception('Failed to fetch weather by location: $e');
+    }
   }
 }

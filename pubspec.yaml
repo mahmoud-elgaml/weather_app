@@ -35,8 +35,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   dio: ^5.8.0+1
-  bloc: ^9.0.0
-  flutter_bloc: ^9.1.1
+  flutter_riverpod: ^2.6.1
+  intl: ^0.20.2
+  geolocator: ^14.0.1
 
 dev_dependencies:
   flutter_test:
@@ -92,8 +93,9 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_launcher_icons:
-  android: "launcher_icon"
+  android: true
   ios: true
   image_path: "assets/images/app_icon.png"
   min_sdk_android: 21
-  background_color: "#89CFF0"
+  background_color: "#00000000" # شفافة
+  adaptive_icon_background: "transparent"
